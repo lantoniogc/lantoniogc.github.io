@@ -1,0 +1,256 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+body {
+  background-color: #2a9d8f;
+}
+
+main {
+  margin-top: 46px;
+}
+
+section {
+  height: 100vh;
+}
+
+h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #242423;
+  font-size: 72px;
+}
+
+h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #242423;
+  font-size: 36px;
+}
+
+h3 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #242423;
+  font-size: 24px;
+}
+
+h4 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #242423;
+  font-size: 18px;
+}
+
+/* Navbar */
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.navbar li {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Layout */
+
+.flex-container {
+  display: flex;
+}
+
+.data {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+/* About */
+
+.about {
+  border: 2.5px dotted black;
+  padding: 20px;
+  margin: 30px 20px 20px 20px;
+  width: 50%;
+}
+
+.about img {
+  width: 50px;
+  height: 50px;
+}
+
+.about li {
+  margin: 10px;
+  padding: 0;
+}
+
+.about-social {
+  text-align: center;
+}
+
+/* Skills */
+
+.container {
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  flex: 1;
+  padding: 25px;
+}
+
+.container .card {
+  position: relative;
+  border-radius: 10px;
+}
+
+.container .card .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.7s;
+  z-index: 1;
+}
+
+.container .card .icon {
+  background: #449bc3;
+}
+
+.container .card .icon .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition: 0.7s;
+  color: #fff;
+}
+
+.container .card .icon b {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #242423;
+  font-size: 70px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .card .icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  transition: 0.7s;
+  color: #fff;
+}
+
+.container .card .icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  transition: 0.7s;
+  color: #fff;
+}
+
+.container .card .face {
+  width: 100px;
+  height: 100px;
+  transition: 0.5s;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+.container .card .face.face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.container .card:hover .face.face1 {
+  background: #ff0057;
+  transform: translateY(0px);
+}
+
+.container .card .face.face1 .content {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container .card .face.face1 .content i {
+  max-width: 100px;
+}
+
+.container a {
+  text-decoration: none;
+  color: #414141;
+}
+
+/* Computer */
+
+.computer-wrapper {
+  padding: 50px;
+  width: 100%;
+}
+
+/* Button styling */
+
+.btn {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn-main {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+/* SVG Specific classes */
+
+.dev {
+  min-width: 120px;
+  width: 100%;
+  height: 100%;
+}
+
+.computer {
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Helper classes */
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pl-25 {
+  padding-left: 25px;
+}
