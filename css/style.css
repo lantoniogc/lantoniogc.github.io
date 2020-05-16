@@ -1,3 +1,5 @@
+/* General */
+
 * {
   padding: 0px;
   margin: 0px;
@@ -6,10 +8,13 @@
 
 body {
   background-color: #2dad9e;
+  margin-top: 46px;
 }
 
-content {
-  margin-top: 46px;
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #242423;
 }
 
 h1 {
@@ -69,16 +74,17 @@ h4 {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  height: auto;
 }
 
 .first-box {
   width: 30%;
-  height: 100vh;
+  height: auto;
 }
 
 .second-box {
   width: 70%;
-  height: 100vh;
+  height: auto;
   background-color: white;
 }
 
@@ -90,6 +96,7 @@ h4 {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  height: auto;
 }
 
 .about-box {
@@ -158,8 +165,9 @@ h4 {
 
 .container .card .icon img {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
+  padding-top: 5px;
   transition: 0.7s;
   color: #fff;
 }
@@ -196,6 +204,7 @@ h4 {
   min-width: 120px;
   width: 100%;
   height: 100%;
+  padding-bottom: 100px;
 }
 
 /* Helper classes */
@@ -208,7 +217,19 @@ h4 {
   padding-left: 25px;
 }
 
+.pr-25 {
+  padding-right: 25px;
+}
+
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
   /* About */
   .about-box {
     width: 100%;
@@ -236,19 +257,55 @@ h4 {
 }
 
 @media screen and (max-width: 640px) {
+  /* General */
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  /* Layout */
   .main {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     height: 100%;
   }
-  .info {
-    height: 50%;
+
+  .info,
+  .skills,
+  .project {
+    height: 33.33%;
   }
-  .skills {
-    height: 25%;
+
+  .first-box {
+    width: 25%;
+    height: auto;
   }
-  .projects {
-    height: 25%;
+
+  .second-box {
+    width: 75%;
+    height: auto;
+    background-color: white;
+  }
+
+  /* About */
+  .computer-box {
+    display: none;
+  }
+
+  /* Skills */
+  .container .card .icon img {
+    padding-top: 0px;
   }
 }
