@@ -7,6 +7,7 @@
 }
 
 body {
+  font-family: 'IBM Plex Sans', sans-serif;
   background-color: #2dad9e;
   margin-top: 46px;
 }
@@ -23,25 +24,21 @@ footer {
 }
 
 h1 {
-  font-family: 'IBM Plex Sans', sans-serif;
   color: #242423;
   font-size: 72px;
 }
 
 h2 {
-  font-family: 'IBM Plex Sans', sans-serif;
   color: #242423;
   font-size: 36px;
 }
 
 h3 {
-  font-family: 'IBM Plex Sans', sans-serif;
   color: #242423;
   font-size: 24px;
 }
 
 h4 {
-  font-family: 'IBM Plex Sans', sans-serif;
   color: #242423;
   font-size: 18px;
 }
@@ -73,6 +70,14 @@ h4 {
 .navbar li:hover {
   background: #ddd;
   color: black;
+}
+
+.logo {
+  float: left;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  color: white;
 }
 
 /* Layout */
@@ -139,6 +144,31 @@ h4 {
   min-width: 300px;
 }
 
+.btn-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin: 5px auto;
+}
+
+.btn-flex .btn {
+  padding: 10px;
+  flex-grow: 1;
+  text-decoration: none;
+  text-align: center;
+  margin: 5px;
+  background: rgb(212, 212, 212);
+  color: black;
+}
+
+.btn-flex .btn-main {
+  background: #269c8e;
+  color: white;
+}
+
 /* Skills */
 
 .container {
@@ -151,15 +181,13 @@ h4 {
 }
 
 .container .card {
-  position: relative;
   border-radius: 10px;
+  width: 20%;
 }
 
 .container .card .icon {
   text-align: center;
-  position: relative;
-  background: #449bc3;
-  width: 100px;
+  background-color: #449bc3;
   height: 100px;
   transition: 0.7s;
   z-index: 1;
@@ -167,7 +195,6 @@ h4 {
 
 .container .card .icon img {
   position: relative;
-  width: 90px;
   height: 90px;
   padding-top: 5px;
   transition: 0.7s;
@@ -177,7 +204,6 @@ h4 {
 .container .card .face {
   margin: 25px;
   box-sizing: border-box;
-  width: 100px;
   height: 100px;
   transition: 0.5s;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
@@ -187,19 +213,6 @@ h4 {
   text-decoration: none;
 }
 
-/* Button styling */
-
-.btn {
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.btn-main {
-  background-color: #2dad9e;
-  color: white;
-}
-
 /* SVG Specific classes */
 
 .dev {
@@ -207,6 +220,10 @@ h4 {
   width: 100%;
   height: 100%;
   padding-bottom: 100px;
+}
+
+.devMobile {
+  display: none;
 }
 
 /* Helper classes */
@@ -243,30 +260,19 @@ h4 {
 
   /* Skills */
 
-  .container .card .face {
-    margin: 20px;
-    width: 75px;
-    height: 75px;
-    box-shadow: 0 10px 7.5px rgba(0, 0, 0, 0.8);
-  }
-  .container .card .icon,
-  .container .card .icon img {
-    width: 75px;
-    height: 75px;
-  }
-  .container .card .icon b {
-    font-size: 57px;
+  .container .card {
+    width: 33%;
   }
 }
 
 @media screen and (max-width: 640px) {
   /* General */
   h1 {
-    font-size: 56px;
+    font-size: 40px;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   h3 {
@@ -275,6 +281,11 @@ h4 {
 
   h4 {
     font-size: 16px;
+  }
+
+  /* Navbar */
+  .logo {
+    display: none;
   }
 
   /* Layout */
@@ -292,17 +303,20 @@ h4 {
   }
 
   .first-box {
-    width: 25%;
-    height: auto;
+    display: none;
   }
 
   .second-box {
-    width: 75%;
+    width: 100%;
     height: auto;
     background-color: white;
   }
 
   /* About */
+  .container .card {
+    width: 50%;
+  }
+
   .computer-box {
     display: none;
   }
@@ -310,5 +324,17 @@ h4 {
   /* Skills */
   .container .card .icon img {
     padding-top: 0px;
+  }
+
+  /* SVG Specific classes */
+  .devMobile-wrapper {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .devMobile {
+    display: inline-block;
+    width: 50%;
+    height: 100px;
   }
 }

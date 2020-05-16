@@ -99,6 +99,17 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 769px) {
+  .swiper-container {
+    margin: 0;
+    width: 100%;
+    height: 450px;
+  }
+  .swiper-container.nav-slider {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .swiper-container {
     margin: 0;
