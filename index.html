@@ -33,19 +33,24 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css"
+    />
+    <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="navbar">
       <ul>
-        <li href="javascript:void(0)">About</li>
-        <li href="javascript:void(0)">Skills</li>
-        <li href="javascript:void(0)">Projects</li>
-        <li href="javascript:void(0)">Contact</li>
+        <a href="#about"><li>About</li></a>
+        <a href="#skills"><li>Skills</li></a>
+        <a href="#projects"><li>Projects</li></a>
+        <a href="#"><li href="#">Contact</li></a>
       </ul>
     </div>
     <div class="main">
-      <section class="info">
+      <section id="about" class="info">
         <div class="flex-container">
           <div class="first-box">
             <img src="img/DevSoloV2.svg" alt="" srcset="" class="dev" />
@@ -85,8 +90,12 @@
 
                   <button class="btn btn-main">Check my work</button>
                   <div class="about-social">
-                    <img src="img/icons8/icons8-github.svg" alt="" />
-                    <img src="img/icons8/icons8-linkedin.svg" alt="" />
+                    <a href="https://github.com/lantoniogc"
+                      ><img src="img/icons8/icons8-github.svg" alt=""
+                    /></a>
+                    <a href="https://www.linkedin.com/in/lantoniogc/"
+                      ><img src="img/icons8/icons8-linkedin.svg" alt=""
+                    /></a>
                   </div>
                 </div>
               </div>
@@ -97,7 +106,7 @@
           </div>
         </div>
       </section>
-      <section class="skills">
+      <section id="skills" class="skills">
         <div class="flex-container">
           <div class="first-box">
             <img src="img/DevRock.svg" alt="" srcset="" class="dev" />
@@ -141,7 +150,12 @@
                 <div class="face face1">
                   <div class="content">
                     <div class="icon">
-                      <b>C</b>
+                      <img
+                        src="img/iconfinder/iconfinder-c.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      />
                     </div>
                   </div>
                 </div>
@@ -159,13 +173,18 @@
               <!--Hi-->
             </div>
             <h2 class="pl-25 pr-25">Frameworks & Tools</h2>
-            <!-- Python -->
+            <!-- Django -->
             <div class="container">
               <div class="card">
                 <div class="face face1">
                   <div class="content">
                     <div class="icon">
-                      <b>dj</b>
+                      <img
+                        src="img/icons8/icons8-django.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      />
                     </div>
                   </div>
                 </div>
@@ -211,20 +230,312 @@
                 </div>
               </div>
             </div>
+            <div class="container">
+              <!-- Loopback4 -->
+              <div class="card">
+                <div class="face face1">
+                  <div class="content">
+                    <div class="icon">
+                      <img src="img/other-icons/loopback4.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- MySQL -->
+              <div class="card">
+                <div class="face face1">
+                  <div class="content">
+                    <div class="icon">
+                      <img src="img/iconfinder/iconfinder-mysql.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Docker -->
+              <div class="card">
+                <div class="face face1">
+                  <div class="content">
+                    <div class="icon">
+                      <img src="img/icons8/icons8-docker.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- HTML5 -->
+              <div class="card">
+                <div class="face face1">
+                  <div class="content">
+                    <div class="icon">
+                      <img src="img/icons8/icons8-html5.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CSS3 -->
+              <div class="card">
+                <div class="face face1">
+                  <div class="content">
+                    <div class="icon">
+                      <img src="img/icons8/icons8-css3.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="projects">
+      <section id="projects" class="projects">
         <div class="flex-container">
           <div class="first-box">
             <img src="img/DevSoloV3.svg" alt="" srcset="" class="dev" />
           </div>
           <div class="second-box">
             <h1 class="pl-25 pr-25">Projects</h1>
+            <div class="swiper-container main-slider loading">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img src="img/projects/ElMenu.png" class="entity-img" />
+                  </figure>
+                  <div class="content">
+                    <p class="title">
+                      EM
+                      <img
+                        src="img/icons8/icons8-django.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><img
+                        src="img/iconfinder/iconfinder-angular.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><img
+                        src="img/icons8/icons8-postgresql.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      />
+                    </p>
+                    <span class="caption"></span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img
+                      src="img/projects/votacionesbd.png"
+                      class="entity-img"
+                    />
+                  </figure>
+                  <div class="content">
+                    <p class="title">
+                      VBD
+                      <img
+                        src="img/iconfinder/iconfinder-laravel.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><img
+                        src="img/icons8/icons8-postgresql.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><a href="https://github.com/lantoniogc/VotacionesBD"
+                        ><img
+                          src="img/icons8/icons8-github.svg"
+                          alt=""
+                          srcset=""
+                          class="icon"
+                      /></a>
+                    </p>
+                    <span class="caption"></span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img src="img/projects/SDE.png" class="entity-img" />
+                  </figure>
+                  <div class="content">
+                    <p class="title">
+                      SDE
+                      <img
+                        src="img/icons8/icons8-javascript.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><img
+                        src="img/icons8/icons8-docker.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><img
+                        src="img/iconfinder/iconfinder-mysql.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><a href="https://github.com/lantoniogc/SDE"
+                        ><img
+                          src="img/icons8/icons8-github.svg"
+                          alt=""
+                          srcset=""
+                          class="icon"
+                      /></a>
+                    </p>
+                    <span class="caption"></span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img
+                      src="img/projects/SocketSimulator.png"
+                      class="entity-img"
+                    />
+                  </figure>
+                  <div class="content">
+                    <p class="title">
+                      SS
+                      <img
+                        src="img/icons8/icons8-javascript.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><img
+                        src="img/icons8/icons8-postgresql.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><a href="https://github.com/lantoniogc/SocketSimulator"
+                        ><img
+                          src="img/icons8/icons8-github.svg"
+                          alt=""
+                          srcset=""
+                          class="icon"
+                      /></a>
+                    </p>
+                    <span class="caption"></span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img src="img/projects/Huffman.png" class="entity-img" />
+                  </figure>
+                  <div class="content">
+                    <p class="title">
+                      HA
+                      <img
+                        src="img/iconfinder/iconfinder-c.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><a href="https://github.com/lantoniogc/HuffmanAlgorithm"
+                        ><img
+                          src="img/icons8/icons8-github.svg"
+                          alt=""
+                          srcset=""
+                          class="icon"
+                      /></a>
+                    </p>
+                    <span class="caption"></span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img
+                      src="img/projects/MInventario.png"
+                      class="entity-img"
+                    />
+                  </figure>
+                  <div class="content">
+                    <p class="title">
+                      MI
+                      <img
+                        src="img/icons8/icons8-java.svg"
+                        alt=""
+                        srcset=""
+                        class="icon"
+                      /><a href="https://github.com/lantoniogc/MInventario"
+                        ><img
+                          src="img/icons8/icons8-github.svg"
+                          alt=""
+                          srcset=""
+                          class="icon"
+                      /></a>
+                    </p>
+                    <span class="caption"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thumbnail navigation -->
+            <div class="swiper-container nav-slider loading">
+              <div class="swiper-wrapper" role="navigation">
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img src="img/projects/ElMenu.png" class="entity-img" />
+                  </figure>
+                  <div class="content">
+                    <p class="title">ElMenu</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img
+                      src="img/projects/votacionesbd.png"
+                      class="entity-img"
+                    />
+                  </figure>
+                  <div class="content">
+                    <p class="title">VotacionesBD</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img src="img/projects/sde.png" class="entity-img" />
+                  </figure>
+                  <div class="content">
+                    <p class="title">SDE</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img
+                      src="img/projects/SocketSimulator.png"
+                      class="entity-img"
+                    />
+                  </figure>
+                  <div class="content">
+                    <p class="title">SocketSimulator</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img src="img/projects/Huffman.png" class="entity-img" />
+                  </figure>
+                  <div class="content">
+                    <p class="title">HuffmanAlgorithm</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <figure class="slide-bgimg">
+                    <img
+                      src="img/projects/MInventario.png"
+                      class="entity-img"
+                    />
+                  </figure>
+                  <div class="content">
+                    <p class="title">MInventario</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </div>
     <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+    <script src="js/projects.js"></script>
   </body>
 </html>
