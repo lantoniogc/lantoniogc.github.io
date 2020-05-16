@@ -5,15 +5,11 @@
 }
 
 body {
-  background-color: #2a9d8f;
+  background-color: #2dad9e;
 }
 
-main {
+content {
   margin-top: 46px;
-}
-
-section {
-  height: 100vh;
 }
 
 h1 {
@@ -69,10 +65,19 @@ h4 {
 
 .flex-container {
   display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.data {
-  width: 100%;
+.first-box {
+  width: 30%;
+  height: 100vh;
+}
+
+.second-box {
+  width: 70%;
   height: 100vh;
   background-color: white;
 }
@@ -80,18 +85,25 @@ h4 {
 /* About */
 
 .about {
-  border: 2.5px dotted black;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.about-box {
+  padding: 25px;
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.about-info {
+  border: 2.5px black dotted;
   padding: 20px;
-  margin: 30px 20px 20px 20px;
-  width: 50%;
 }
 
-.about img {
-  width: 50px;
-  height: 50px;
-}
-
-.about li {
+.about-info li {
   margin: 10px;
   padding: 0;
 }
@@ -100,14 +112,26 @@ h4 {
   text-align: center;
 }
 
+.computer-box {
+  width: 60%;
+  height: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.computer-box img {
+  min-width: 300px;
+}
+
 /* Skills */
 
 .container {
-  position: relative;
-  justify-content: space-between;
   display: flex;
-  flex: 1;
-  padding: 25px;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
 }
 
 .container .card {
@@ -116,106 +140,41 @@ h4 {
 }
 
 .container .card .icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #f00;
+  text-align: center;
+  position: relative;
+  background: #449bc3;
+  width: 100px;
+  height: 100px;
   transition: 0.7s;
   z-index: 1;
-}
-
-.container .card .icon {
-  background: #449bc3;
-}
-
-.container .card .icon .fa {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 80px;
-  transition: 0.7s;
-  color: #fff;
 }
 
 .container .card .icon b {
   font-family: 'IBM Plex Sans', sans-serif;
   color: #242423;
-  font-size: 70px;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.container .card .icon i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 70px;
-  transition: 0.7s;
+  font-size: 76px;
   color: #fff;
 }
 
 .container .card .icon img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
+  position: relative;
+  width: 100px;
+  height: 100px;
   transition: 0.7s;
   color: #fff;
 }
 
 .container .card .face {
+  margin: 25px;
+  box-sizing: border-box;
   width: 100px;
   height: 100px;
   transition: 0.5s;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
 }
 
-.container .card .face.face1 {
-  position: relative;
-  background: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
-.container .card:hover .face.face1 {
-  background: #ff0057;
-  transform: translateY(0px);
-}
-
-.container .card .face.face1 .content {
-  opacity: 1;
-  transition: 0.5s;
-}
-
-.container .card:hover .face.face1 .content {
-  opacity: 1;
-}
-
-.container .card .face.face1 .content i {
-  max-width: 100px;
-}
-
 .container a {
   text-decoration: none;
-  color: #414141;
-}
-
-/* Computer */
-
-.computer-wrapper {
-  padding: 50px;
-  width: 100%;
 }
 
 /* Button styling */
@@ -227,7 +186,7 @@ h4 {
 }
 
 .btn-main {
-  background-color: #2a9d8f;
+  background-color: #2dad9e;
   color: white;
 }
 
@@ -235,12 +194,6 @@ h4 {
 
 .dev {
   min-width: 120px;
-  width: 100%;
-  height: 100%;
-}
-
-.computer {
-  min-width: 300px;
   width: 100%;
   height: 100%;
 }
@@ -253,4 +206,49 @@ h4 {
 
 .pl-25 {
   padding-left: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  /* About */
+  .about-box {
+    width: 100%;
+  }
+
+  .computer-box {
+    width: 100%;
+  }
+
+  /* Skills */
+  .container .card .face {
+    margin: 20px;
+    width: 75px;
+    height: 75px;
+    box-shadow: 0 10px 7.5px rgba(0, 0, 0, 0.8);
+  }
+  .container .card .icon,
+  .container .card .icon img {
+    width: 75px;
+    height: 75px;
+  }
+  .container .card .icon b {
+    font-size: 57px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+  }
+  .info {
+    height: 50%;
+  }
+  .skills {
+    height: 25%;
+  }
+  .projects {
+    height: 25%;
+  }
 }
