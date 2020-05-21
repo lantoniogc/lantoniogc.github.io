@@ -1,87 +1,67 @@
-// Params
-let mainSliderSelector = '.main-slider',
-  navSliderSelector = '.nav-slider',
-  interleaveOffset = 0.5;
+let pos = [];
 
-// Main Slider
-let mainSliderOptions = {
-  loop: true,
-  speed: 1000,
-  autoplay: {
-    delay: 3000,
-  },
-  loopAdditionalSlides: 10,
-  grabCursor: true,
-  watchSlidesProgress: true,
-  on: {
-    init: function () {
-      this.autoplay.stop();
-    },
-    imagesReady: function () {
-      this.el.classList.remove('loading');
-      this.autoplay.start();
-    },
-    slideChangeTransitionEnd: function () {
-      let swiper = this,
-        captions = swiper.el.querySelectorAll('.caption');
-      for (let i = 0; i < captions.length; ++i) {
-        captions[i].classList.remove('show');
-      }
-      swiper.slides[swiper.activeIndex]
-        .querySelector('.caption')
-        .classList.add('show');
-    },
-    progress: function () {
-      let swiper = this;
-      for (let i = 0; i < swiper.slides.length; i++) {
-        let slideProgress = swiper.slides[i].progress,
-          innerOffset = swiper.width * interleaveOffset,
-          innerTranslate = slideProgress * innerOffset;
+filterSelection('all');
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName('column');
 
-        swiper.slides[i].querySelector('.slide-bgimg').style.transform =
-          'translateX(' + innerTranslate + 'px)';
-      }
-    },
-    touchStart: function () {
-      let swiper = this;
-      for (let i = 0; i < swiper.slides.length; i++) {
-        swiper.slides[i].style.transition = '';
-      }
-    },
-    setTransition: function (speed) {
-      let swiper = this;
-      for (let i = 0; i < swiper.slides.length; i++) {
-        swiper.slides[i].style.transition = speed + 'ms';
-        swiper.slides[i].querySelector('.slide-bgimg').style.transition =
-          speed + 'ms';
-      }
-    },
-  },
-};
-let mainSlider = new Swiper(mainSliderSelector, mainSliderOptions);
+  if (pos.length >= 0) {
+    for (let i = 0; i < pos.length; i++) {
+      w3RemoveClass(x[pos[i]], 'm-236');
+    }
+    pos = [];
+  }
 
-// Navigation Slider
-let navSliderOptions = {
-  loop: true,
-  loopAdditionalSlides: 10,
-  speed: 1000,
-  spaceBetween: 5,
-  slidesPerView: 5,
-  centeredSlides: true,
-  touchRatio: 0.2,
-  slideToClickedSlide: true,
-  direction: 'vertical',
-  on: {
-    imagesReady: function () {
-      this.el.classList.remove('loading');
-    },
-    click: function () {
-      mainSlider.autoplay.stop();
-    },
-  },
-};
-let navSlider = new Swiper(navSliderSelector, navSliderOptions);
+  if (c == 'all') c = '';
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], 'show');
+    if (x[i].className.indexOf(c) > -1) {
+      w3AddClass(x[i], 'show');
+      pos.push(i);
+    }
+  }
 
-// Matching sliders
-mainSlider.controller.control = navSlider;
-navSlider.controller.control = mainSlider;
+  if (
+    (pos.length <= 2 && screen.width > 640 && screen.width <= 1200) ||
+    (pos.length <= 3 && screen.width > 1200)
+  ) {
+    for (let i = 0; i < pos.length; i++) {
+      w3AddClass(x[pos[i]], 'm-236');
+    }
+  } else {
+    pos = [];
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(' ');
+  arr2 = name.split(' ');
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += ' ' + arr2[i];
+    }
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(' ');
+  arr2 = name.split(' ');
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(' ');
+}
+
+var btnContainer = document.getElementById('myBtnContainer');
+var btns = btnContainer.getElementsByClassName('btn-filter');
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener('click', function () {
+    var current = document.getElementsByClassName('active');
+    current[0].className = current[0].className.replace(' active', '');
+    this.className += ' active';
+  });
+}

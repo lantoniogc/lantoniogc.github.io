@@ -33,10 +33,6 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css"
-    />
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -124,243 +120,184 @@
           </div>
           <div class="second-box">
             <h1 class="pl-25 pr-25">Projects</h1>
-            <div class="swiper-container main-slider loading">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img src="img/projects/ElMenu.png" class="entity-img" />
-                  </figure>
-                  <div class="content">
-                    <p class="title">
-                      EM
-                      <img
-                        src="img/icons8/icons8-django.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><img
-                        src="img/iconfinder/iconfinder-angular.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><img
-                        src="img/icons8/icons8-postgresql.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      />
-                    </p>
-                    <span class="caption"></span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img
-                      src="img/projects/votacionesbd.png"
-                      class="entity-img"
-                    />
-                  </figure>
-                  <div class="content">
-                    <p class="title">
-                      VBD
-                      <img
-                        src="img/iconfinder/iconfinder-laravel.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><img
-                        src="img/icons8/icons8-postgresql.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><a href="https://github.com/lantoniogc/VotacionesBD"
-                        ><img
-                          src="img/icons8/icons8-github.svg"
-                          alt=""
-                          srcset=""
-                          class="icon"
-                      /></a>
-                    </p>
-                    <span class="caption"></span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img src="img/projects/SDE.png" class="entity-img" />
-                  </figure>
-                  <div class="content">
-                    <p class="title">
-                      SDE
-                      <img
-                        src="img/icons8/icons8-javascript.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><img
-                        src="img/icons8/icons8-docker.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><img
-                        src="img/iconfinder/iconfinder-mysql.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><a href="https://github.com/lantoniogc/SDE"
-                        ><img
-                          src="img/icons8/icons8-github.svg"
-                          alt=""
-                          srcset=""
-                          class="icon"
-                      /></a>
-                    </p>
-                    <span class="caption"></span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img
-                      src="img/projects/SocketSimulator.png"
-                      class="entity-img"
-                    />
-                  </figure>
-                  <div class="content">
-                    <p class="title">
-                      SS
-                      <img
-                        src="img/icons8/icons8-javascript.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><img
-                        src="img/icons8/icons8-postgresql.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><a href="https://github.com/lantoniogc/SocketSimulator"
-                        ><img
-                          src="img/icons8/icons8-github.svg"
-                          alt=""
-                          srcset=""
-                          class="icon"
-                      /></a>
-                    </p>
-                    <span class="caption"></span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img src="img/projects/Huffman.png" class="entity-img" />
-                  </figure>
-                  <div class="content">
-                    <p class="title">
-                      HA
-                      <img
-                        src="img/iconfinder/iconfinder-c.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><a href="https://github.com/lantoniogc/HuffmanAlgorithm"
-                        ><img
-                          src="img/icons8/icons8-github.svg"
-                          alt=""
-                          srcset=""
-                          class="icon"
-                      /></a>
-                    </p>
-                    <span class="caption"></span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img
-                      src="img/projects/MInventario.png"
-                      class="entity-img"
-                    />
-                  </figure>
-                  <div class="content">
-                    <p class="title">
-                      MI
-                      <img
-                        src="img/icons8/icons8-java.svg"
-                        alt=""
-                        srcset=""
-                        class="icon"
-                      /><a href="https://github.com/lantoniogc/MInventario"
-                        ><img
-                          src="img/icons8/icons8-github.svg"
-                          alt=""
-                          srcset=""
-                          class="icon"
-                      /></a>
-                    </p>
-                    <span class="caption"></span>
-                  </div>
-                </div>
-              </div>
+            <div class="pt-25 pl-25" id="myBtnContainer">
+              <button
+                class="btn-filter active"
+                onclick="filterSelection('all')"
+              >
+                <img src="img/ALL.svg" alt="" srcset="" class="project-stack" />
+              </button>
+              <button class="btn-filter" onclick="filterSelection('python')">
+                <img
+                  src="img/icons8/icons8-python.svg"
+                  alt=""
+                  srcset=""
+                  class="project-stack"
+                />
+              </button>
+              <button class="btn-filter" onclick="filterSelection('php')">
+                <img
+                  src="img/icons8/icons8-php.svg"
+                  alt=""
+                  srcset=""
+                  class="project-stack"
+                />
+              </button>
+              <button class="btn-filter" onclick="filterSelection('js')">
+                <img
+                  src="img/icons8/icons8-javascript.svg"
+                  alt=""
+                  srcset=""
+                  class="project-stack"
+                />
+              </button>
+              <button class="btn-filter" onclick="filterSelection('java')">
+                <img
+                  src="img/icons8/icons8-java.svg"
+                  alt=""
+                  srcset=""
+                  class="project-stack"
+                />
+              </button>
+              <button class="btn-filter" onclick="filterSelection('c-lang')">
+                <img
+                  src="img/iconfinder/iconfinder-c.svg"
+                  alt=""
+                  srcset=""
+                  class="project-stack"
+                />
+              </button>
             </div>
 
-            <!-- Thumbnail navigation -->
-            <div class="swiper-container nav-slider loading">
-              <div class="swiper-wrapper" role="navigation">
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img src="img/projects/ElMenu.png" class="entity-img" />
-                  </figure>
-                  <div class="content">
-                    <p class="title">ElMenu</p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
+            <!-- Portfolio Gallery Grid -->
+            <div class="row pl-25">
+              <div class="column python js">
+                <div class="content">
+                  <img
+                    src="img/projects/ElMenu.png"
+                    alt="Mountains"
+                    style="width: 100%;"
+                    class="project-photo"
+                  />
+                  <h4>
+                    ElMenu
                     <img
-                      src="img/projects/votacionesbd.png"
-                      class="entity-img"
+                      src="img/icons8/icons8-live.svg"
+                      alt=""
+                      srcset=""
+                      class="project-stack"
                     />
-                  </figure>
-                  <div class="content">
-                    <p class="title">VotacionesBD</p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img src="img/projects/sde.png" class="entity-img" />
-                  </figure>
-                  <div class="content">
-                    <p class="title">SDE</p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img
-                      src="img/projects/SocketSimulator.png"
-                      class="entity-img"
-                    />
-                  </figure>
-                  <div class="content">
-                    <p class="title">SocketSimulator</p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img src="img/projects/Huffman.png" class="entity-img" />
-                  </figure>
-                  <div class="content">
-                    <p class="title">HuffmanAlgorithm</p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg">
-                    <img
-                      src="img/projects/MInventario.png"
-                      class="entity-img"
-                    />
-                  </figure>
-                  <div class="content">
-                    <p class="title">MInventario</p>
-                  </div>
+                  </h4>
+                  <p>Administrative Platform</p>
                 </div>
               </div>
+              <div class="column php js">
+                <div class="content">
+                  <img
+                    src="img/projects/votacionesbd.png"
+                    alt="Lights"
+                    style="width: 100%;"
+                    class="project-photo"
+                  />
+                  <h4>
+                    VotacionesBD
+                    <img
+                      src="img/icons8/icons8-github.svg"
+                      alt=""
+                      srcset=""
+                      class="project-stack"
+                    />
+                    <img
+                      src="img/icons8/icons8-live.svg"
+                      alt=""
+                      srcset=""
+                      class="project-stack"
+                    />
+                  </h4>
+                  <p>Voting system</p>
+                </div>
+              </div>
+              <div class="column js">
+                <div class="content">
+                  <img
+                    src="img/projects/SDE.png"
+                    alt="Nature"
+                    style="width: 100%;"
+                    class="project-photo"
+                  />
+                  <h4>
+                    SDE
+                    <img
+                      src="img/icons8/icons8-github.svg"
+                      alt=""
+                      srcset=""
+                      class="project-stack"
+                    />
+                  </h4>
+                  <p>A survey with Cluster/OLAP Cube</p>
+                </div>
+              </div>
+              <div class="column js">
+                <div class="content">
+                  <img
+                    src="img/projects/SocketSimulator.svg"
+                    alt="Car"
+                    style="width: 100%;"
+                    class="project-photo"
+                  />
+                  <h4>
+                    SocketSimulator
+                    <img
+                      src="img/icons8/icons8-github.svg"
+                      alt=""
+                      srcset=""
+                      class="project-stack"
+                    />
+                  </h4>
+                  <p>Socket 4x4 race</p>
+                </div>
+              </div>
+              <div class="column java">
+                <div class="content">
+                  <img
+                    src="img/projects/MInventario.png"
+                    alt="Car"
+                    style="width: 100%;"
+                    class="project-photo"
+                  />
+                  <h4>
+                    MInventario
+                    <img
+                      src="img/icons8/icons8-github.svg"
+                      alt=""
+                      srcset=""
+                      class="project-stack"
+                    />
+                  </h4>
+                  <p>Inventory model simulation</p>
+                </div>
+              </div>
+              <div class="column c-lang">
+                <div class="content">
+                  <img
+                    src="img/projects/Huffman.png"
+                    alt="Car"
+                    style="width: 100%;"
+                    class="project-photo"
+                  />
+                  <h4>
+                    Huffman Algorithm
+                    <img
+                      src="img/icons8/icons8-github.svg"
+                      alt=""
+                      srcset=""
+                      class="project-stack"
+                    />
+                  </h4>
+                  <p>Data Structures, Files</p>
+                </div>
+              </div>
+              <!-- END GRID -->
             </div>
           </div>
         </div>
@@ -377,7 +314,7 @@
             <div class="container">
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/icons8/icons8-python.svg" alt="" />
                     </div>
@@ -387,7 +324,7 @@
               <!-- JS -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/icons8/icons8-javascript.svg" alt="" />
                     </div>
@@ -397,7 +334,7 @@
               <!-- PHP -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/icons8/icons8-php.svg" alt="" />
                     </div>
@@ -407,7 +344,7 @@
               <!--C-->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img
                         src="img/iconfinder/iconfinder-c.svg"
@@ -422,7 +359,7 @@
               <!--Java-->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/icons8/icons8-java.svg" alt="" />
                     </div>
@@ -436,7 +373,7 @@
             <div class="container">
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img
                         src="img/icons8/icons8-django.svg"
@@ -451,7 +388,7 @@
               <!-- Angular -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/iconfinder/iconfinder-angular.svg" alt="" />
                     </div>
@@ -461,7 +398,7 @@
               <!-- Laravel -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/iconfinder/iconfinder-laravel.svg" alt="" />
                     </div>
@@ -471,7 +408,7 @@
               <!-- PostgreSQL -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/icons8/icons8-postgresql.svg" alt="" />
                     </div>
@@ -481,7 +418,7 @@
               <!-- MongoDB -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/icons8/icons8-mongodb.svg" alt="" />
                     </div>
@@ -493,7 +430,7 @@
               <!-- Loopback4 -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/other-icons/loopback4.svg" alt="" />
                     </div>
@@ -503,7 +440,7 @@
               <!-- MySQL -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/iconfinder/iconfinder-mysql.svg" alt="" />
                     </div>
@@ -513,7 +450,7 @@
               <!-- Docker -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/icons8/icons8-docker.svg" alt="" />
                     </div>
@@ -523,7 +460,7 @@
               <!-- HTML5 -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/icons8/icons8-html5.svg" alt="" />
                     </div>
@@ -533,7 +470,7 @@
               <!-- CSS3 -->
               <div class="card">
                 <div class="face face1">
-                  <div class="content">
+                  <div class="skill-content">
                     <div class="icon">
                       <img src="img/icons8/icons8-css3.svg" alt="" />
                     </div>
@@ -546,7 +483,6 @@
       </section>
     </div>
     <footer></footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
     <script src="js/projects.js"></script>
   </body>
 </html>
