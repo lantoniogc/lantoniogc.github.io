@@ -1,7 +1,5 @@
 # Personal Portfolio (WIP)
 
-![alt tag](https://i.imgur.com/f1Lr7FV.png)
-
 ## TODO
 
 - [ ] Contact me
