@@ -1,11 +1,4 @@
-# Personal Portfolio (WIP)
-
-## TODO
-
-- [ ] Contact me
-- [ ] Footer
-- [ ] Better mobile UX (It's responsive but it need to be a bit more mobile-friendly)
-- [ ] Mobile Navigation
+# Personal Portfolio
 
 ## Built with the help of
 
