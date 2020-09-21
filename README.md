@@ -11,7 +11,5 @@
 - [FormSpree](https://formspree.io/) - Form static submit
 - [Adam Dipinto](https://codepen.io/AdamDipinto/pen/JjPmxPe) - Skills
 - [Flatart](https://www.iconfinder.com/Flatart) - Angular logo
-- [Abhishek Pipalva](https://www.iconfinder.com/abhishekpipalva) - Laravel logo
 - [Li Cindy](https://www.iconfinder.com/customicondesign) - C logo
 - [Samat Odedara](https://www.iconfinder.com/samatodedara) - MySQL logo
-- [Seeklogo](https://seeklogo.com/vector-logo/363137/loopback) - Loopback4 logo
